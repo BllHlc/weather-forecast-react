@@ -6,8 +6,8 @@
 
 - Axios
 - React Icon
-- @react-hook/window-size
-- Tailwindcss
+- reactstrap
+- Bootstrap
 
 ## Run it on your computer
 
