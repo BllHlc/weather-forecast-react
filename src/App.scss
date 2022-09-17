@@ -1,0 +1,292 @@
+$lightThemeBg: rgb(158, 210, 198);
+$light1: rgb(247, 236, 222);
+$light2: rgb(233, 218, 193);
+$lightText: rgb(21, 32, 43);
+$darkThemeBg: rgb(30, 39, 50);
+$dark1: rgb(21, 32, 43);
+$lightBorder: 1px solid black;
+$innerShadow: rgb(0 0 0 / 20%) 4px -4px 3px inset;
+$outerShadow: rgb(84, 186, 185) 6px -5px 0px 3px;
+$outerShadowLight: rgb(84 186 185 / 20%) 3px -3px 0px 2px;
+$transition: all 0.3s ease-in-out;
+$darkText: rgb(247, 236, 222);
+$darkThemeShadow: rgb(45, 66, 99) 6px -5px 0px 3px;
+$darkBorder: 1px solid rgb(247, 236, 222, 0.5);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.main {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: $lightThemeBg;
+  padding: 40px;
+  height: 100vh;
+  overflow-y: scroll;
+  transition: $transition;
+
+  .navbar,
+  .today,
+  .weekly {
+    background: $light1;
+    border-radius: 20px;
+    display: flex;
+    border: $lightBorder;
+    font-weight: bold;
+    color: $lightText;
+    box-shadow: $outerShadow;
+    transition: $transition;
+
+
+    &:not(:first-child) {
+      margin-top: 30px;
+    }
+  }
+
+  .navbar {
+    .dropdown {
+      * {
+        transition: $transition;
+      }
+
+      .dropdown-toggle {
+        box-shadow: $outerShadowLight !important;
+        min-width: 162px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: $light2;
+        color: $lightText;
+        font-weight: bold;
+        border: $lightBorder;
+        outline: none;
+        box-shadow: none;
+        border-radius: 10px;
+      }
+
+      .dropdown-menu {
+        border-radius: 10px;
+        background: $light1;
+        border: $lightBorder;
+        margin-top: 5px;
+        width: 162px;
+        box-shadow: $outerShadowLight;
+
+        .dropDown {
+          max-height: 200px;
+          overflow: auto;
+
+          button {
+            color: #000;
+          }
+
+          &::-webkit-scrollbar {
+            width: 5px;
+            background-color: $light1
+          }
+
+          &::-webkit-scrollbar-thumb {
+            background-color: $dark1;
+          }
+        }
+      }
+    }
+
+    .themeBtn {
+      background: $light2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 6px;
+      border-radius: 10px;
+      cursor: pointer;
+      border: $lightBorder;
+      font-weight: bold;
+      font-size: 16px;
+      box-shadow: $outerShadowLight;
+
+      img,
+      svg {
+        width: 24px;
+        height: 24px;
+        color: #000;
+      }
+    }
+
+    .day {
+      cursor: auto;
+    }
+  }
+
+  .today {
+    .title {
+      text-align: center;
+      font-size: 24px;
+      padding: 10px;
+      border-radius: 10px;
+      border: $lightBorder;
+      background-color: $light2;
+    }
+
+    .box {
+      padding: 10px;
+      border: $lightBorder;
+      border-radius: 10px;
+      background: $light2;
+
+      box-shadow: $outerShadowLight;
+
+      &.temp {
+        img {
+          width: 75px;
+          height: 75px;
+        }
+
+        .innerBox {
+          height: 90px;
+          padding: 5px 5px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+
+        .feels {
+          img {
+            width: 50px;
+            height: 50px;
+          }
+        }
+      }
+
+      &.weather {
+
+        img {
+          width: 100px;
+          height: 100px;
+        }
+
+        .description {
+          max-width: 180px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+      }
+
+      &.sun {
+        img {
+          width: 50px;
+          height: 50px;
+        }
+
+        .time {
+          width: 50px;
+          font-size: 24px;
+        }
+      }
+
+      .innerBox {
+        border: $lightBorder;
+        border-radius: 10px;
+        padding: 5px 20px;
+        background: $light1;
+        box-shadow: $innerShadow;
+      }
+    }
+  }
+
+  .weekly {
+    .title {
+      text-align: center;
+      font-size: 24px;
+      padding: 10px;
+      border-radius: 10px;
+      border: $lightBorder;
+      background-color: $light2;
+    }
+
+    .box {
+      padding: 10px;
+      border: $lightBorder;
+      border-radius: 10px;
+      background: $light2;
+      box-shadow: $outerShadowLight;
+      width: 13%;
+
+      .day {
+        font-size: 13px;
+        text-align: center;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+
+      .innerBox {
+        border: $lightBorder;
+        border-radius: 10px;
+        padding: 5px 10px;
+        background: $light1;
+        box-shadow: $innerShadow;
+      }
+    }
+  }
+
+  &.dark {
+    background: $darkThemeBg;
+
+    svg {
+      // color: $darkText !important;
+    }
+
+    .navbar,
+    .today,
+    .weekly {
+      color: $darkText;
+      background: $dark1;
+      box-shadow: $darkThemeShadow !important;
+      border: $darkBorder;
+
+      .themeBtn,
+      .title,
+      .box,
+      .innerBox,
+      .dropdown button,
+      .dropdown-menu {
+        background: $darkThemeBg !important;
+        border: $darkBorder;
+
+        .innerBox {
+          background: $dark1 !important;
+        }
+      }
+
+      .dropdown button,
+      .dropdown-menu button {
+        background: $darkThemeBg !important;
+        color: $darkText !important;
+      }
+
+      .themeBtn {
+        svg {
+          color: $darkText !important;
+        }
+      }
+    }
+  }
+
+  @media only screen and (max-width:992px) {
+    padding: 30px 10px;
+
+    .weekly {
+      .box {
+        width: 100%;
+        margin-bottom: 1rem;
+      }
+    }
+  }
+}
