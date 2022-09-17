@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/weather-forecast-react/static/css/main.69a696ba.css",
+    "main.js": "/weather-forecast-react/static/js/main.a65e96d1.js",
+    "static/media/thermometer-warmer.svg": "/weather-forecast-react/static/media/thermometer-warmer.5f9dfc8ccdb911dfa0fe592996330abb.svg",
+    "static/media/thermometer-colder.svg": "/weather-forecast-react/static/media/thermometer-colder.88b91af5f3ec11036126a092ea0d0365.svg",
+    "index.html": "/weather-forecast-react/index.html",
+    "main.69a696ba.css.map": "/weather-forecast-react/static/css/main.69a696ba.css.map",
+    "main.a65e96d1.js.map": "/weather-forecast-react/static/js/main.a65e96d1.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.69a696ba.css",
+    "static/js/main.a65e96d1.js"
+  ]
+}
