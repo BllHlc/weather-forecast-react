@@ -1,6 +1,6 @@
 # Open Weather Api - ReactJS App
 
-### [See it live]() ↗
+### [See it live](https://bllhlc.github.io/weather-forecast-react/) ↗
 
 ## Dependencies
 
