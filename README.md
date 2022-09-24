@@ -8,7 +8,7 @@
 - Axios
 - React Icon
 - reactstrap
-- Bootstrapü
+- Bootstrap
 - sass
 
 ![1664060648058](https://user-images.githubusercontent.com/77120913/192121608-50dd0c50-2a49-40a5-9abf-59e76e04a476.png)
