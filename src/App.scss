@@ -239,10 +239,6 @@ $darkBorder: 1px solid rgb(247, 236, 222, 0.5);
   &.dark {
     background: $darkThemeBg;
 
-    svg {
-      // color: $darkText !important;
-    }
-
     .navbar,
     .today,
     .weekly {
